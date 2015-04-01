@@ -1,4 +1,4 @@
-<h1>Welcome to Retflix</h1>
+ <h1>Welcome to Retflix</h1>
 <p>See our collection of movies below:</p>
 
 <ul>
@@ -7,10 +7,8 @@
 	<%end%>
 </ul>
 
- <%= form_tag movies_path, method: 'GET' do %>
- <%= text_field_tag :q, params[:q] %>
- <%= submit_tag 'Search' %>
- <%end%>
+
+<%= link_to 'Add Movie' , new_movie_path %>
 
 
 

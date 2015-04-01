@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    resources :movies, only: [:index, :show, :search, :new, :edit]
+    resources :movies, only: [:index, :show, :search, :new, :edit, :create]
 
   # get 'movies/index'
 
