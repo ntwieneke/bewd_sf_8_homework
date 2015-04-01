@@ -1,0 +1,16 @@
+<h1>Welcome to Retflix</h1>
+<p>See our collection of movies below:</p>
+
+<ul>
+	<% @movies.each do |movie|  %>
+		<li><%=link_to movie.name, "/movies/#{movie.id}" %></li>
+	<%end%>
+</ul>
+
+ <%= form_tag movies_path, method: 'GET' do %>
+ <%= text_field_tag :q, params[:q] %>
+ <%= submit_tag 'Search' %>
+ <%end%>
+
+
+
