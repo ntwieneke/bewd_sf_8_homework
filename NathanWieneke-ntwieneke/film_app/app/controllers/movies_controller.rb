@@ -1,4 +1,6 @@
 class MoviesController < ApplicationController
+  before_action :set_movie, only: [:show, :search, :edit]
+
   def index
   	@movies = Movie.all
   end
@@ -27,7 +29,7 @@ class MoviesController < ApplicationController
   end
   private 
   	def set_movie
-      @movie = movie.find(params[:id])
+      @movie = Movie.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
